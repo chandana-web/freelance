@@ -908,4 +908,3 @@ const visibleCategories = isMobile
 };
 
 export default Home;
-

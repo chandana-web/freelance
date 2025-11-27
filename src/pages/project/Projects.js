@@ -331,6 +331,12 @@ const currentProjects = projectList.slice(
     onClick={() => setCurrentPage(currentPage + 1)}
     className="page-btn"
   >›</button>
+  <div>
+  {/* <p className="pagination-info">
+  Showing {(currentPage - 1) * itemsPerPage + 1} – 
+  {Math.min(currentPage * itemsPerPage, projectList.length)} of {projectList.length}+ results
+</p> */}
+</div>
 </div>
 
     </div>

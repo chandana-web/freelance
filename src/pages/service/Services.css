@@ -334,9 +334,19 @@
 
 .pagination-info {
   text-align: center;
+  margin-left: 40px;
   margin-top: 10px;
   font-size: 14px;
   color: #444;
+}
+
+.hover-text {
+  transition: color 0.25s, text-decoration 0.25s;
+}
+
+.gig-card:hover .hover-text {
+  color: #198754; /* Fiverr green */
+  text-decoration: underline;
 }
 
 

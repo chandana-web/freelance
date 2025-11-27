@@ -15,7 +15,9 @@ const Navbar = () => {
     const [sidebar, setSidebar]=useState(false);
     const [openMenu, setOpenMenu] = useState(null);
     const { pathname } = useLocation();
-const isServicesPage = pathname === "/services";
+const isServicesPage = pathname === "/services" || pathname === "/freelancerprofile";
+
+
 
 
 
@@ -35,7 +37,7 @@ const isServicesPage = pathname === "/services";
         className={`navbar fixed-top py-3 px-3 ${isServicesPage ? "services-navbar" : ""} ${scrolled ? "navbar-white shadow-sm" : "navbar-transparent"}
       `}
       >
-        <div className='nav-container d-flex align-items-center justify-content-between w-100'>
+        <div className='nav-container d-flex align-items-center  w-100'>
         {/* Menu Icon - visible on mobile only */}
         <button
           className="btn d-lg-none"

@@ -8,6 +8,7 @@ import Contact from '../pages/contact/Contact'
 import TndC from '../pages/t&c/TndC'
 import Blog from '../pages/blog/Blog'
 import Projects from '../pages/project/Projects'
+import FreelancerProfile from '../pages/service/FreelancerProfile'
 
 const MainRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const MainRoutes = () => {
             <Route element={<MainLayout/>}>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/services' element={<Services/>}/>
+                <Route path='freelancerprofile' element={<FreelancerProfile/>}/>
                 <Route path='/projects' element={<Projects/>}/>
                 <Route path='/blog' element={<Blog/>}/>
                 <Route path='/aboutus' element={<About/>}/>

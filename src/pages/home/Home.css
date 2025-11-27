@@ -16,8 +16,8 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  padding-top: 170px;
-  margin-left: 120px;
+  padding-top: 170px !important;
+  margin-left: 120px !important;
   max-width: 600px;
   text-align: left;
 
@@ -933,14 +933,14 @@ background: transparent;
   }
   /* Remove desktop-based left padding */
   .hero-content {
-    margin-right: 100px;
+    margin-right: 100px ;
     text-align: center !important;
   }
 
   /* Center heading & text */
   .hero-content h1,
   .hero-content p {
-    text-align: center;
+    text-align: center !important;
   }
 
   /* Search bar stack into vertical layout */

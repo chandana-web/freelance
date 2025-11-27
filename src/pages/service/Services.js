@@ -6,6 +6,7 @@ import dropdownIcon from "../../assets/dropDown.png"
 import filterIcon from "../../assets/filterIcon.png"
 import { AiFillStar } from 'react-icons/ai'
 import { FiHeart } from 'react-icons/fi'
+import { useNavigate } from 'react-router-dom'
 
 const websiteGigsData = [
   {
@@ -501,12 +502,13 @@ const currentData = websiteGigsData.slice(
 
 
   const GigCard = ({ gig }) => {
+    const navigate = useNavigate();
     const [activeImage, setActiveImage] = useState(0);
     const { images, seller, title, rating, reviews, price, level } = gig;
 
 
     return (
-      <div className="gig-card">
+      <div className="gig-card" >
 
         {/* Image Carousel */}
         <div className="gig-img-wrapper">
@@ -525,10 +527,11 @@ const currentData = websiteGigsData.slice(
         </div>
 
         {/* Seller */}
+        <div onClick={()=>navigate("/freelancerprofile")}>
         <div className="seller-row">
           <div >
           <img src={seller.avatar} alt="" className="seller-img" />
-          <span className="seller-name">{seller.name}</span>
+          <span className="seller-name hover-text">{seller.name}</span>
           </div>
           <div>
           {level && <span className="badge">{level}</span>}
@@ -549,6 +552,7 @@ const currentData = websiteGigsData.slice(
         <div className="price-row">
           <span className="from">From</span>
           <span className="price">₹{price}</span>
+        </div>
         </div>
 
       </div>
