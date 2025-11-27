@@ -1,0 +1,347 @@
+/* EXISTING STYLES (UNCHANGED) */
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.navbar-transparent {
+  background: transparent !important;
+  transition: 0.3s ease;
+}
+
+.navbar-white {
+  background: white !important;
+  transition: 0.3s ease;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-toggler {
+  filter: invert(1); /* Makes hamburger white in transparent mode */
+  
+    display: none !important;
+
+}
+
+.bbg {
+  background-color: gray;
+  padding: 5px;
+  border-radius: 25%;
+}
+
+.wbg {
+  background-color: #198754;
+  padding: 5px;
+  border-radius: 25%;
+}
+
+/* DROPDOWN ON HOVER (DESKTOP ONLY) */
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 40px;
+  }
+  .nav-item:hover{
+    cursor: pointer;
+  }
+  .dropdown-item:hover{
+    background: #198754 !important;
+    border-radius:3px ;
+  }
+  .navbar-brand {
+    position: relative;
+    left: unset;
+    transform: unset;
+    margin: 0;
+  }
+  .navbar-nav {
+    margin-left: auto !important;
+    margin-right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+   .dropdown-menu {
+    
+    top: 2px
+  }
+  .navbar-nav,
+  .navbar-nav .nav-item,
+  .navbar-nav .dropdown {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-nav > li {
+    margin-left: 18px;
+  }
+
+  nav.navbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .navbar-brand {
+    margin-right: auto !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px;
+  }
+
+  .navbar-nav {
+    display: flex !important;
+    
+    align-items: center !important;
+    margin-right: 20px !important;
+  }
+
+  .navbar-nav > li {
+    margin-left: 20px;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+}
+
+/* Remove arrow icon */
+.dropdown-toggle::after {
+  vertical-align: 0.15em;
+  display: none !important;
+}
+
+.dropdown-menu {
+  z-index: 3000 !important;
+}
+
+
+/* ----------------------------------
+   🚀 NEW MOBILE RESPONSIVE BEHAVIOR
+------------------------------------ */
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1200;
+  overflow-y: auto;
+  text-align: start;
+  background: #ffffff;
+  padding: 20px;
+  
+  
+  border-right: 1px solid #ddd;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+/* Overlay when sidebar opens */
+.sidebar-backdrop {
+  position: fixed;
+  
+  
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+}
+
+.sidebar ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f1f1f;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+}
+
+/* Section labels like "General" */
+.sidebar-section-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #555;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+/* Accordion buttons */
+.sidebar-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 15px 0;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Arrow icon */
+.arrow {
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* Dropdown inside */
+.submenu {
+  margin-left: 10px;
+  padding-left: 10px;
+  
+  margin-bottom: 5px;
+}
+
+/* Children in submenu */
+.submenu li a {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 6px 0;
+}
+
+/* Join button like Fiverr */
+.sidebar .join-btn {
+  width: 50%;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-left: 130px;
+  font-weight: 600;
+}
+
+/* Dropdown icon styling */
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+/* Rotate when open */
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+
+/* Remove bullet dots */
+.sidebar ul,
+.submenu {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+/* MOBILE NAV FIXES */
+@media (max-width: 991px) {
+
+  /* Hide default nav links */
+
+  .sidebar{
+    position: fixed;
+  }
+  .navbar .collapse {
+    display: none !important;
+  }
+
+  /* Center logo */
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+
+    
+  }
+
+  /* Make nav height uniform */
+  nav.navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Ensure toggle icon stays visible */
+  .navbar-toggler {
+    z-index: 2002;
+  }
+}
+
+/* Larger clickable sidebar links */
+.sidebar ul li {
+  margin: 12px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  font-size: 18px;
+  display: block;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.sidebar-toggle:focus {
+  outline: none;
+}
+
+.submenu {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.submenu li {
+  margin: 8px 0;
+}
+
+.sidebar-item {
+  margin-bottom: 10px;
+}
+.sidebar-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1100;
+}
