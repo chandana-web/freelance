@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  /* width: 100%; */
 }
 .navbar-transparent {
   background: transparent !important;
@@ -267,6 +267,7 @@
 @media (max-width: 991px) {
 
   /* Hide default nav links */
+  
 
   .sidebar{
     position: fixed;
